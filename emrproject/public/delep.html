@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Delete a patient</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    </head>
+    <body>
+        <div class="wrap_page">
+            <aside class="side_bar">
+                <div class="page-name"><p class="page-name-shown">EMR Project</p></div>
+                <hr style="color:white;width:100%;text-align:left;margin-left:0">
+                <hr style="color:white;width:100%;text-align:left;margin-left:0">
+                <div class="bar_choices">
+                    <p><a class="ad-choice" href="dashboard.html">Admin</a></p>
+                </div>
+                <hr style="color:white;width:100%;text-align:left;margin-left:0">
+                <div class="bar_choices">
+                    <p><a class="ad-choice" href="patient.html">Patients</a></p>
+                </div>
+                <hr style="color:white;width:100%;text-align:left;margin-left:0">
+                <div class="bar_choices">
+                    <p>Doctors</p>
+                </div>
+                <hr style="color:white;width:100%;text-align:left;margin-left:0">
+                <div class="bar_choices">
+                    <p>Prescriptions</p>
+                </div>
+                <hr style="color:white;width:100%;text-align:left;margin-left:0">
+                <div class="bar_choices">
+                    <p>Guidance</p>
+                </div>
+                <hr style="color:white;width:100%;text-align:left;margin-left:0">
+                <div class="bar_choices">
+                    <p>Messages</p>
+                </div>
+                <hr style="color:white;width:100%;text-align:left;margin-left:0">
+                <div class="bar_choices">
+                    <p>Feedback</p>
+                </div>
+                <hr style="color:white;width:100%;text-align:left;margin-left:0">
+                <div class="bar_choices">
+                    <p><a class="ad-choice" href="home.html">Log out</a></p>
+                </div>
+            </aside>
+            <div class="dashboard">
+                <div class="dashboard_title">
+                    <h1>Delete a patient</h1>
+                </div> 
+                <div class="opt_l">
+                    <h3 class="add_opt_h">ID</h3>
+                    <input name="id" id="id" class="add_op" type="text" placeholder="Enter a patient's ID">
+                </div>
+                <div class="btn_ctl">
+                    <button class="submit" id="removeData">Delete</button>
+                    <button class="submit"><a href="patient.html" target="_self">Back</a></button>
+                </div>
+                <button class="submit" id="removeDataAll">Delete All</button>
+            </div>
+        </div>
+    </body>
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+  import { getDatabase, set, ref ,push, child, onValue, remove} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBhbikTZ5S6F49PsRIRQ1dmu0uCvLg4emk",
+    authDomain: "emrsystemproject.firebaseapp.com",
+    databaseURL: "https://emrsystemproject-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "emrsystemproject",
+    storageBucket: "emrsystemproject.appspot.com",
+    messagingSenderId: "204346294403",
+    appId: "1:204346294403:web:31e2ba93ac0e948a3bdbb6",
+    measurementId: "G-PG5GTVTC91"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+
+   // delete data
+   removeData.addEventListener('click',(e) => {
+    var ID = document.getElementById('id').value;
+   
+    remove(ref(database, 'Patient/' + ID));
+    alert('Patient is removed!');
+   });
+   removeDataAll.addEventListener('click',(e) => {
+    remove(ref(database, 'Patient/'));
+    alert('All the patienta are removed!');
+   });
+
+</script>

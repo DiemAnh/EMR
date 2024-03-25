@@ -1,0 +1,321 @@
+body {
+    font-family: 'Helvetica';
+    color: black;
+    text-align: center;
+    height: -webkit-fill-available;
+    width: 100%;
+}
+.nav-bar,.nav-list{
+    height:50px;
+    width:100%;
+    position: fixed;
+    background-color:black;
+    display: flex;
+    text-align: justify;
+}
+.page-name{
+    width: 200px;
+    font-size: 1.3rem;
+    font-weight: 505;
+    position: relative;
+}
+.page-name-shown{
+    padding-left: 10px;
+    margin-left: 8px;
+    margin-top: 12px;
+    background: linear-gradient(to right, rgb(233, 79, 250),rgb(128, 38, 246));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.list-fix{
+    width: 600px;
+    position: relative;
+    text-align: left;
+    display:flex;
+    color: white;
+    list-style: none;
+}
+.list-op{
+    width:120px;
+    position: relative;
+    text-align: left;
+    display:flex;
+    font-weight:400;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+}
+.method{
+    width: 150px;
+    display: flex;
+}
+.page-intro{
+    width: 100%;
+    height:50%;
+}
+.page-purpose{
+    height: 50%;
+}
+.page-intro{
+    background-image: url(img/electronic-banner.jpg);
+}
+.page-def{
+    height:50%;
+    display: flex;
+    text-align: left;
+    padding-top: 50px;
+}
+.page-users{
+    display: flex;
+    padding-top: 0px;
+    height:50%;
+}
+.def-content{
+    padding-left: 50px;
+    padding-right:20px ;
+    width: 50%;
+}
+.def-pic{
+    padding-right: 50px;
+    padding-left: 20px;
+    height: 400px;
+    width: 50%;
+}
+.intro{
+    padding-top:200px;
+    padding-bottom:150px;
+    padding-left:60px;
+    padding-right:60px;
+    color: white;
+    font-size: 1.5rem;
+}
+.user-pic{
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+}
+.user-cont{
+    padding-right: 50px;
+    text-align: left;
+    padding-left: 15px;
+}
+.page-purpose{
+    height: 20%;
+}
+.purpose-main{
+    text-align: left;
+    padding-left: 50px;
+}
+.purpose-list{
+    display: flex;
+}
+.purpose-content{
+    width:14%;
+    padding: 20px;
+    text-align: left;
+}
+.pur-pic{
+    padding: 20px;
+}
+.info{
+    display:flex;
+}
+.footer-list{
+    list-style: none;
+}
+.info-detail-cont{
+    text-align: left;
+}
+footer{
+    background-color: gray;
+    color:white;
+}
+.info-detail{
+    width: 50%;
+    padding-left: 50px;
+}
+.info-contact{
+    width: 50%;
+}
+.info-detail-main,.info-contact-main{
+    text-align: left;
+}
+.info-contact-cont{
+    height:50px;
+}
+.contact-icon{
+    height:50px;
+    display: flex;
+}
+.contact-icon-list{
+    display: flex;
+    list-style: none;
+}
+.icon-list{
+    height:50px;
+    padding-left: 10px;
+}
+.wrap_page{
+    display: flex;   
+    flex-direction: row;
+    position: relative;
+    height: -webkit-fill-available;
+}
+.wrap_home{
+    height: 100%;
+}
+.side_bar{
+    background-color: black;
+    color: white;
+    width: auto;
+    height:auto;
+    overflow-y: auto;
+}
+.dashboard{
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    text-align: left;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.ad_name,.bar_choices{
+    text-align: left;
+    padding-left: 20px;
+}
+.dashboard_content{
+    position: relative;
+}
+.dashboard_content_pic{
+    display: flex;
+    position: relative;
+}
+.dashboard_content_pic_1{
+    width: 25%;
+    border-radius: 30px;
+    height: 100px;
+    background-image: url(img/pat.jpg);
+    background-size: cover;
+    padding: 10px;
+    margin: 10px;
+}
+.dashboard_content_pic_2{
+    width: 25%;
+    border-radius: 30px;
+    height: 100px;
+    background-image: url(img/bluelig.jpeg);
+    background-size: cover;
+    padding: 10px;
+    margin: 10px;
+}
+.dashboard_content_pic_3{
+    width: 25%;
+    border-radius: 30px;
+    height: 100px;
+    background-image: url(img/purplelig.png);
+    background-size: cover;
+    padding: 10px;
+    margin: 10px;
+}
+.dashboard_content_pic_4{
+    width: 25%;
+    border-radius: 30px;
+    height: 100px;
+    background-image: url(img/greenlig.jpg);
+    background-size: cover;
+    padding: 10px;
+    margin: 10px;
+}
+.pic_num{
+    position: relative;
+    width: 25%;
+    height: 100px;
+    text-align: center;
+    color: black;
+}
+.pic_num_ord{
+    position: absolute;
+    font-size: 3.2rem;
+    font-weight: 900;
+}
+.pic_num_con{
+    position:absolute;
+    padding: 50px;
+}
+.acc_opt{
+    display: flex;
+}
+.acc_opt_detail{
+    border: 1px solid gray;
+    border-radius: 30px;
+    background-color: rgb(213, 212, 212);
+    color:black;
+    padding: 3px;
+    margin: 6px;
+    overflow-y: auto;
+}
+.acc_patients{
+    height: 400px;
+    overflow-y: auto;
+    display: flex;
+}
+.table_pat{
+    border: 1px solid gray;
+    border-radius: 10px;
+    border-collapse: collapse;
+    width: 100%;
+}
+tr{
+    height:50px;
+}
+td{
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 20px;
+}
+.option_header{
+
+}
+.opt_h{
+    font-size: medium;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(50, 98, 241);
+    color: white;
+}
+.opt_h2{
+    font-size: medium;
+    padding: 10px;
+}
+.opt_r{
+    font-size: medium;
+    float: right;
+    padding-right: 100px;
+}
+.opt_l{
+    font-size: medium;
+    float: left;
+    padding-right: 100px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.add_opt_h,.add_op{
+    font-size: medium;
+    padding: 10px;
+    font-size: medium;
+}
+.submit{
+    padding: 10px;
+    margin: 30px;
+    width: 100px;
+    border-radius: 10px;
+    font-size: medium;
+    background-color: rgb(50, 98, 241);
+    color: white;
+}
+.btn_ctl{
+    display: flex;
+    flex-direction: row;
+}
